@@ -4,7 +4,6 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./components/Home";
 import Collaborators from "./components/Collaborators";
 import Contact from "./components/Contact";
-import Testing from "./components/Testing";
 import HeartResult from "./components/HeartResult";   // ✅ NEW RESULT PAGE
 
 import Footer from "./components/Footer";
@@ -28,7 +27,6 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/collaborators" element={<Collaborators />} />
             <Route path="/contact" element={<Contact />} />
-            <Route path="/testing" element={<Testing />} />
 
             {/* NEW RESULT ROUTE */}
             <Route path="/heart-result" element={<HeartResult />} />
