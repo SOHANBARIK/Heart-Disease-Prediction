@@ -118,7 +118,7 @@ const Footer = () => {
 
 
           <div style={{ fontSize: "18px", color: "#fff" }}>
-            <p style={{ margin: "3px 0" }}>📧 medinauts.team@gmail.com</p>
+            <p style={{ margin: "3px 0" }}>📧 support@medinauts.com</p>
             <p style={{ margin: "3px 0" }}>☎️ 03582 21156</p>
           </div>
         </div>

@@ -56,7 +56,7 @@ const Contact = () => {
               fontWeight: "600",
             }}
           >
-            📧 medinauts.team@gmail.com
+            📧 support@medinauts.com
           </p>
 
           <p
@@ -66,7 +66,7 @@ const Contact = () => {
               fontWeight: "600",
             }}
           >
-            📞 +91 9876543210
+            📞 03582 21156
           </p>
         </div>
 
