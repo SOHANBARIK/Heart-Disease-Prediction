@@ -1,7 +1,7 @@
 import React from "react";
-import { useNavigate } from "react-router-dom"; // ✅ Import useNavigate
+import { useNavigate } from "react-router-dom";
 
-// Import all images from src/image
+// Import all images
 import m1 from "./image/anish.jpeg";
 import m2 from "./image/sohan.jpeg";
 import m3 from "./image/chayan.jpeg";
@@ -10,28 +10,28 @@ import m5 from "./image/animesh.png";
 import team from "./image/team.jpg";
 
 const Collaborators = () => {
-  const navigate = useNavigate(); // ✅ Initialize navigate
+  const navigate = useNavigate();
 
   const members = [
-    { img: m1, name: "Anish Haldar", email: "anishhaldarkingto@gmail.com", github: "https://github.com/anishhaldar12", linkedin: "https://www.linkedin.com/in/anish-haldar-b47659284" },
-    { img: m2, name: "Sohan Barik", email: "sohanbarik227@gmail.com", github: "https://github.com/SOHANBARIK", linkedin: "https://www.linkedin.com/in/sohan-barik-b6a464286/" },
-    { img: m3, name: "Chayan Chattaraj", email: "chayanchattaraj123456789@gmail.com", github: "https://github.com/chayan-chattaraj", linkedin: "https://www.linkedin.com/in/chayan-chattaraj-165231355" },
-    { img: m4, name: "Jibotosh Dey", email: "deyjibo44@gmail.com", github: "https://github.com/deyjibo", linkedin: "https://www.linkedin.com/in/jibotosh-dey-3542aa245/" },
-    { img: m5, name: "Animesh Naskar", email: "an2190944@gmail.com", github: "https://github.com/example5", linkedin: "https://linkedin.com/in/example5" },
+    { img: m1, name: "Anish Haldar", role: "Frontend Developer", email: "anishhaldarkingto@gmail.com", github: "https://github.com/anishhaldar12", linkedin: "https://www.linkedin.com/in/anish-haldar-b47659284" },
+    { img: m2, name: "Sohan Barik", role: "Backend Developer", email: "sohanbarik227@gmail.com", github: "https://github.com/SOHANBARIK", linkedin: "https://www.linkedin.com/in/sohan-barik-b6a464286/" },
+    { img: m3, name: "Chayan Chattaraj", role: "Full Stack Developer", email: "chayanchattaraj123456789@gmail.com", github: "https://github.com/chayan-chattaraj", linkedin: "https://www.linkedin.com/in/chayan-chattaraj-165231355" },
+    { img: m4, name: "Jibotosh Dey", role: "UI/UX Designer", email: "deyjibo44@gmail.com", github: "https://github.com/deyjibo", linkedin: "https://www.linkedin.com/in/jibotosh-dey-3542aa245/" },
+    { img: m5, name: "Animesh Naskar", role: "Project Manager", email: "an2190944@gmail.com", github: "https://github.com/Animesh4203", linkedin: "https://www.linkedin.com/in/animesh-naskar-8a1911285" },
   ];
 
   return (
     <div style={{ background: "#fde0e0", minHeight: "100vh", padding: "40px 20px" }}>
-      {/* Top Team Image + Text */}
+      {/* Top Team Image + Text side by side */}
       <div
         style={{
           maxWidth: "1100px",
           margin: "0 auto 50px auto",
           display: "flex",
           flexWrap: "wrap",
-          justifyContent: "center",
           alignItems: "center",
           gap: "40px",
+          justifyContent: "center",
         }}
       >
         <img
@@ -43,7 +43,7 @@ const Collaborators = () => {
             boxShadow: "0 8px 20px rgba(0,0,0,0.15)",
           }}
         />
-        <div style={{ textAlign: "center" }}>
+        <div style={{ maxWidth: "600px" }}>
           <h2 style={{ fontSize: "40px", color: "#b71c1c" }}>Our Team</h2>
           <p style={{ fontSize: "18px", color: "#3a3a3a", marginBottom: "25px" }}>
             Meet the People Behind Your Success
@@ -120,11 +120,17 @@ const MemberCard = ({ member }) => {
           height: "130px",
           borderRadius: "50%",
           objectFit: "cover",
-          marginBottom: "15px",
+          display: "block",
+          margin: "0 auto 15px",
         }}
       />
       <h4 style={{ fontSize: "20px", marginBottom: "5px" }}>{member.name}</h4>
-      <p>Email: {member.email}</p>
+      <p style={{ fontSize: "16px", color: "#555", fontWeight: "bold", marginBottom: "5px" }}>
+        {member.role}
+      </p>
+      <p style={{ fontSize: "14px", color: "#333", whiteSpace: "nowrap" }}>
+        Email: {member.email}
+      </p>
       <div
         style={{
           display: "flex",
