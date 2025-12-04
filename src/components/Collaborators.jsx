@@ -13,11 +13,11 @@ const Collaborators = () => {
   const navigate = useNavigate();
 
   const members = [
-    { img: m1, name: "Anish Haldar", role: "Frontend Developer", email: "anishhaldarkingto@gmail.com", github: "https://github.com/anishhaldar12", linkedin: "https://www.linkedin.com/in/anish-haldar-b47659284" },
+    { img: m1, name: "Anish Haldar", role: "Project Manager", email: "anishhaldarkingto@gmail.com", github: "https://github.com/anishhaldar12", linkedin: "https://www.linkedin.com/in/anish-haldar-b47659284" },
     { img: m2, name: "Sohan Barik", role: "Backend Developer", email: "sohanbarik227@gmail.com", github: "https://github.com/SOHANBARIK", linkedin: "https://www.linkedin.com/in/sohan-barik-b6a464286/" },
-    { img: m3, name: "Chayan Chattaraj", role: "Full Stack Developer", email: "chayanchattaraj123456789@gmail.com", github: "https://github.com/chayan-chattaraj", linkedin: "https://www.linkedin.com/in/chayan-chattaraj-165231355" },
-    { img: m4, name: "Jibotosh Dey", role: "UI/UX Designer", email: "deyjibo44@gmail.com", github: "https://github.com/deyjibo", linkedin: "https://www.linkedin.com/in/jibotosh-dey-3542aa245/" },
-    { img: m5, name: "Animesh Naskar", role: "Project Manager", email: "an2190944@gmail.com", github: "https://github.com/Animesh4203", linkedin: "https://www.linkedin.com/in/animesh-naskar-8a1911285" },
+    { img: m3, name: "Chayan Chattaraj", role: "Backend Developer", email: "chayanchattaraj123456789@gmail.com", github: "https://github.com/chayan-chattaraj", linkedin: "https://www.linkedin.com/in/chayan-chattaraj-165231355" },
+    { img: m4, name: "Jibotosh Dey", role: "Full Stack Developer", email: "deyjibo44@gmail.com", github: "https://github.com/deyjibo", linkedin: "https://www.linkedin.com/in/jibotosh-dey-3542aa245/" },
+    { img: m5, name: "Animesh Naskar", role: "UI/UX Designer", email: "an2190944@gmail.com", github: "https://github.com/Animesh4203", linkedin: "https://www.linkedin.com/in/animesh-naskar-8a1911285" },
   ];
 
   return (

@@ -24,7 +24,25 @@ const Navbar = () => {
       >
         {/* Logo and Name */}
         <div style={{ display: "flex", alignItems: "center", gap: "15px" }}>
-          <img src={logo} alt="Logo" style={{ width: "55px", height: "55px" }} />
+          <img
+            src={logo}
+            alt="Logo"
+            style={{
+              width: "55px",
+              height: "55px",
+              borderRadius: "12px", // rounded corners
+              transition: "all 0.3s ease",
+              boxShadow: "0 0 0 rgba(0,0,0,0)", // initial no shadow
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.boxShadow = "0 8px 20px rgba(211, 47, 47, 0.6)";
+              e.currentTarget.style.transform = "translateY(-3px)"; // slide up effect
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.boxShadow = "0 0 0 rgba(0,0,0,0)";
+              e.currentTarget.style.transform = "translateY(0)";
+            }}
+          />
           <h1
             style={{
               fontSize: "30px",

@@ -1,5 +1,6 @@
 import React from "react";
 import logo from "./image/logo.PNG"; // <-- Correct logo import
+import { FaFacebookF, FaTwitter, FaLinkedinIn } from "react-icons/fa";
 
 const Footer = () => {
   return (
@@ -32,7 +33,25 @@ const Footer = () => {
               marginBottom: "10px",
             }}
           >
-            <img src={logo} alt="Logo" style={{ width: "80px" }} />
+            <img
+              src={logo}
+              alt="Logo"
+              style={{
+                width: "80px",
+                borderRadius: "12px", // rounded corners
+                transition: "all 0.3s ease",
+                boxShadow: "0 0 0 rgba(0,0,0,0)", // initial no shadow
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.boxShadow =
+                  "0 8px 20px rgba(255,255,255,0.6)";
+                e.currentTarget.style.transform = "translateY(-3px)"; // slide up effect
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.boxShadow = "0 0 0 rgba(0,0,0,0)";
+                e.currentTarget.style.transform = "translateY(0)";
+              }}
+            />
             <h1 style={{ fontSize: "36px", margin: 0 }}>MediNauts</h1>
           </div>
 
@@ -54,20 +73,20 @@ const Footer = () => {
         >
           <div style={{ display: "flex", flexDirection: "column", gap: "12px" }}>
             <a href="/" style={linkStyle}>Home</a>
-            <a href="/book-test" style={linkStyle}>Book a Test</a>
-            <a href="/consult" style={linkStyle}>Consult a Doctor</a>
-            <a href="/feedback" style={linkStyle}>Feedback</a>
-            <a href="/home-collection" style={linkStyle}>Home Collection</a>
-            <a href="/customer-care" style={linkStyle}>Customer Care</a>
+            <a href="/" style={linkStyle}>Predict</a>
+            <a href="/" style={linkStyle}>Consult a Doctor</a>
+            <a href="/" style={linkStyle}>Feedback</a>
+            <a href="/" style={linkStyle}>Home Collection</a>
+            <a href="/" style={linkStyle}>Customer Care</a>
           </div>
 
           <div style={{ display: "flex", flexDirection: "column", gap: "12px" }}>
-            <a href="/faqs" style={linkStyle}>FAQ’S</a>
-            <a href="/investor-relations" style={linkStyle}>Investor Relations</a>
-            <a href="/career" style={linkStyle}>Career</a>
+            <a href="/" style={linkStyle}>FAQ’S</a>
+            <a href="/">Investor Relations</a>
+            <a href="/">Career</a>
             <a href="/contact" style={linkStyle}>Contact Us</a>
-            <a href="/privacy" style={linkStyle}>Privacy Policy</a>
-            <a href="/terms" style={linkStyle}>Terms & Conditions</a>
+            <a href="/" style={linkStyle}>Privacy Policy</a>
+            <a href="/" style={linkStyle}>Terms & Conditions</a>
           </div>
         </div>
 
@@ -84,14 +103,23 @@ const Footer = () => {
           </p>
 
           <div style={{ display: "flex", gap: "10px", marginBottom: "15px" }}>
-            <SocialButton link="https://facebook.com" color="#4267B2">F</SocialButton>
-            <SocialButton link="https://twitter.com" color="#1DA1F2">T</SocialButton>
-            <SocialButton link="https://linkedin.com" color="#0A66C2">L</SocialButton>
+            <SocialButton link="https://facebook.com" color="#4267B2">
+              <FaFacebookF size={20} />
+            </SocialButton>
+
+            <SocialButton link="https://twitter.com" color="#1DA1F2">
+              <FaTwitter size={20} />
+            </SocialButton>
+
+            <SocialButton link="https://linkedin.com" color="#0A66C2">
+              <FaLinkedinIn size={20} />
+            </SocialButton>
           </div>
+
 
           <div style={{ fontSize: "18px", color: "#fff" }}>
             <p style={{ margin: "3px 0" }}>📧 medinauts.team@gmail.com</p>
-            <p style={{ margin: "3px 0" }}>📞 +91 9876543210</p>
+            <p style={{ margin: "3px 0" }}>☎️ 03582 21156</p>
           </div>
         </div>
       </div>

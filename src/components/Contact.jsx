@@ -40,7 +40,12 @@ const Contact = () => {
           <img
             src={logo}
             alt="Logo"
-            style={{ width: "140px", marginBottom: "20px" }}
+            style={{
+              width: "140px",
+              marginBottom: "20px",
+              borderRadius: "12px", // Rounded corners
+              boxShadow: "0 4px 15px rgba(0,0,0,0.2)", // Shadow/border effect
+            }}
           />
 
           <p
