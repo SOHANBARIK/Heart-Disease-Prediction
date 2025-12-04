@@ -80,7 +80,7 @@ const HomePage = () => {
                 <span>With AI.</span>
               </h1>
 
-              {/* Description Box (Left Aligned) */}
+              {/* Description Box */}
               <div
                 style={{
                   background: "white",
@@ -91,18 +91,21 @@ const HomePage = () => {
                   boxShadow: "0 4px 10px rgba(0,0,0,0.1)",
                   border: "1.5px solid #e4e9f0",
                   marginBottom: "40px",
-                  textAlign: "left", // LEFT ALIGNED
+                  textAlign: "left",
                   fontSize: "15px",
                   lineHeight: 1.6,
                   color: "#465269",
                 }}
               >
-                MediNauts utilizes advanced Machine Learning algorithms to predict
-                heart disease risk with 98% accuracy. Early detection saves lives.
+                MediNauts utilizes advanced Machine Learning algorithms to
+                predict heart disease risk with 98% accuracy. Early detection
+                saves lives.
               </div>
 
               {/* Buttons */}
               <div style={{ display: "flex", gap: "20px", marginBottom: "55px" }}>
+                
+                {/* ▶ START PREDICTION BUTTON WITH HOVER EFFECT */}
                 <button
                   style={{
                     padding: "14px 32px",
@@ -113,6 +116,15 @@ const HomePage = () => {
                     fontSize: "18px",
                     fontWeight: "600",
                     cursor: "pointer",
+                    transition: "0.3s ease",
+                  }}
+                  onMouseEnter={(e) => {
+                    e.target.style.transform = "scale(1.07)";
+                    e.target.style.boxShadow = "0 6px 20px rgba(183, 28, 28, 0.4)";
+                  }}
+                  onMouseLeave={(e) => {
+                    e.target.style.transform = "scale(1)";
+                    e.target.style.boxShadow = "none";
                   }}
                   onClick={() => setShowModal(true)}
                 >
@@ -134,7 +146,7 @@ const HomePage = () => {
                     cursor: "pointer",
                   }}
                   onClick={() =>
-                    window.open("https://www.youtube.com/watch?v=dQw4w9WgXcQ", "_blank") // replace with your video
+                    window.open("https://www.youtube.com/watch?v=dQw4w9WgXcQ", "_blank")
                   }
                 >
                   <FaPlay /> Watch Demo
@@ -145,15 +157,21 @@ const HomePage = () => {
               <div style={{ display: "flex", gap: "70px" }}>
                 <div>
                   <p style={{ margin: 0, fontSize: "30px", fontWeight: "800" }}>98%</p>
-                  <span style={{ fontSize: "15px", color: "#465269" }}>Accuracy Rate</span>
+                  <span style={{ fontSize: "15px", color: "#465269" }}>
+                    Accuracy Rate
+                  </span>
                 </div>
                 <div>
                   <p style={{ margin: 0, fontSize: "30px", fontWeight: "800" }}>24/7</p>
-                  <span style={{ fontSize: "15px", color: "#465269" }}>Instant Results</span>
+                  <span style={{ fontSize: "15px", color: "#465269" }}>
+                    Instant Results
+                  </span>
                 </div>
                 <div>
                   <p style={{ margin: 0, fontSize: "30px", fontWeight: "800" }}>50k+</p>
-                  <span style={{ fontSize: "15px", color: "#465269" }}>Users Analyzed</span>
+                  <span style={{ fontSize: "15px", color: "#465269" }}>
+                    Users Analyzed
+                  </span>
                 </div>
               </div>
             </div>
@@ -201,7 +219,9 @@ const HomePage = () => {
                   <FaCheck style={{ color: "#2ecc71", fontSize: "20px" }} />
                   <div>
                     <p style={{ margin: 0, fontWeight: "700" }}>Heart Rate</p>
-                    <p style={{ margin: 0, fontWeight: "700", color: "#e63946" }}>72 BPM</p>
+                    <p style={{ margin: 0, fontWeight: "700", color: "#e63946" }}>
+                      72 BPM
+                    </p>
                   </div>
                 </div>
 
@@ -232,7 +252,9 @@ const HomePage = () => {
                   ></span>
                   <div>
                     <p style={{ margin: 0, fontWeight: "700" }}>Status</p>
-                    <p style={{ margin: 0, fontSize: "15px", color: "#465269" }}>Normal</p>
+                    <p style={{ margin: 0, fontSize: "15px", color: "#465269" }}>
+                      Normal
+                    </p>
                   </div>
                 </div>
               </div>
@@ -241,7 +263,7 @@ const HomePage = () => {
         </div>
       </div>
 
-      {/* Full-Screen Modal with Blur Background */}
+      {/* Full-Screen Modal */}
       {showModal && (
         <div
           style={{
@@ -254,14 +276,14 @@ const HomePage = () => {
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
-            background: "rgba(255,255,255,0.3)", // overlay
-            backdropFilter: "blur(8px)", // blur background
+            background: "rgba(255,255,255,0.3)",
+            backdropFilter: "blur(8px)",
           }}
           onClick={() => setShowModal(false)}
         >
           <div
             style={{
-              background: "#fff", // modal box
+              background: "#fff",
               padding: "30px",
               borderRadius: "16px",
               maxWidth: "900px",
