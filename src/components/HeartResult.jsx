@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 // HeartResult.jsx (modified)
+=======
+>>>>>>> upstream/main
 import React from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 
@@ -8,10 +11,17 @@ function calculateRisk(data) {
   if (data.age > 50) score += 15;
   if (data.chol > 200) score += 15;
   if (data.trestbps > 130) score += 10;
+<<<<<<< HEAD
   if (data.exang === 1 || data.exang === "1") score += 20;
   if (data.cp === 2 || data.cp === 3 || data.cp === "2" || data.cp === "3") score += 15;
   if (data.thalach < 120) score += 10;
   if (Number(data.oldpeak) > 2.0) score += 15;
+=======
+  if (data.exang === "1") score += 20;
+  if (data.cp === "2" || data.cp === "3") score += 15;
+  if (data.thalach < 120) score += 10;
+  if (data.oldpeak > 2.0) score += 15;
+>>>>>>> upstream/main
   return Math.min(score, 95);
 }
 
@@ -33,6 +43,7 @@ const HeartResultModal = ({ close }) => {
         <p style={subTitle}>Based on your submitted clinical parameters</p>
 
         <div style={resultBox}>
+<<<<<<< HEAD
   
           {/* High / Low Risk Header */}
           <h2 style={riskTitle}>
@@ -100,6 +111,20 @@ const HeartResultModal = ({ close }) => {
               ))
             : <div style={infoItem}>No form data</div>
           }
+=======
+          <h2 style={riskTitle}>{riskScore >= 50 ? "⚠️ High Risk Detected" : "✅ Low Risk Detected"}</h2>
+          <p style={riskPercentage}>Estimated Risk Score: <b>{riskScore}%</b></p>
+        </div>
+
+        <h3 style={sectionTitle}>Your Entered Parameters</h3>
+        <div style={grid}>
+          {Object.entries(state).map(([key, value]) => (
+            <div key={key} style={infoItem}>
+              <span style={infoLabel}>{key.toUpperCase()} : </span>
+              <span style={infoValue}>{value}</span>
+            </div>
+          ))}
+>>>>>>> upstream/main
         </div>
 
         <div style={btnRow}>
@@ -117,7 +142,11 @@ const HeartResultModal = ({ close }) => {
   );
 };
 
+<<<<<<< HEAD
 /* ---------------- STYLES ---------------- (same as your original file) */
+=======
+/* ---------------- STYLES ---------------- */
+>>>>>>> upstream/main
 const overlay = { position:"fixed", top:0, left:0, width:"100vw", height:"100vh", background:"rgba(0,0,0,0.5)", backdropFilter:"blur(8px)", display:"flex", justifyContent:"center", alignItems:"center", zIndex:1000, padding:"20px" };
 const card = { width:"90%", maxWidth:"1000px", background:"#fff", borderRadius:"20px", padding:"30px 40px", boxShadow:"0 8px 25px rgba(0,0,0,0.25)", position:"relative", maxHeight:"90vh", overflowY:"auto" };
 const closeBtn = { position:"absolute", top:"18px", right:"20px", fontSize:"32px", border:"none", background:"none", cursor:"pointer", color:"#222" };
@@ -146,4 +175,7 @@ const newBtn = {
 };
 
 export default HeartResultModal;
+<<<<<<< HEAD
 
+=======
+>>>>>>> upstream/main

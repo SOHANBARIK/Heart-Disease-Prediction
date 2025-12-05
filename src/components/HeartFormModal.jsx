@@ -1,9 +1,15 @@
+<<<<<<< HEAD
 // HeartFormModal.jsx (modified)
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 const API_BASE = process.env.REACT_APP_API_URL || "http://127.0.0.1:8000";
 
+=======
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
+
+>>>>>>> upstream/main
 const HeartFormModal = ({ close }) => {
   const navigate = useNavigate();
 
@@ -23,13 +29,17 @@ const HeartFormModal = ({ close }) => {
     thal: ""
   });
 
+<<<<<<< HEAD
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
 
+=======
+>>>>>>> upstream/main
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
+<<<<<<< HEAD
   // Convert string form values to numbers where necessary
   const normalizeForm = (f) => ({
     age: Number(f.age),
@@ -79,6 +89,12 @@ const HeartFormModal = ({ close }) => {
     } finally {
       setLoading(false);
     }
+=======
+  const submitForm = (e) => {
+    e.preventDefault();
+    if (close) close();
+    navigate("/heart-result", { state: form });
+>>>>>>> upstream/main
   };
 
   return (
@@ -128,6 +144,7 @@ const HeartFormModal = ({ close }) => {
           </div>
 
           <div style={{ textAlign: "center", marginTop: 20 }}>
+<<<<<<< HEAD
             <button
               type="submit"
               style={processBtn}
@@ -140,13 +157,22 @@ const HeartFormModal = ({ close }) => {
           </div>
 
           {error && <p style={{ color: "red", marginTop: 10 }}>{error}</p>}
+=======
+            <button type="submit" style={processBtn} onMouseEnter={(e)=>e.currentTarget.style.backgroundPosition="left center"} onMouseLeave={(e)=>e.currentTarget.style.backgroundPosition="right center"}>
+              Process Data ❤️
+            </button>
+          </div>
+>>>>>>> upstream/main
         </form>
       </div>
     </div>
   );
 };
 
+<<<<<<< HEAD
 /* Field component and styles unchanged from your file */
+=======
+>>>>>>> upstream/main
 const Field = ({ label, name, type, placeholder, value, onChange, options, hint }) => (
   <div style={fieldBox}>
     <label style={labelStyle}>{label}</label>
@@ -162,7 +188,11 @@ const Field = ({ label, name, type, placeholder, value, onChange, options, hint 
   </div>
 );
 
+<<<<<<< HEAD
 /* styles (same as yours) */
+=======
+/* ---------------- STYLES ---------------- */
+>>>>>>> upstream/main
 const overlayStyle = {
   position: "fixed",
   top: 0, left: 0, width: "100vw", height: "100vh",
@@ -182,6 +212,7 @@ const hintStyle = { fontSize: 11, color: "#777", width: 100, lineHeight: 1.3 };
 const processBtn = { backgroundSize: "200% auto", backgroundImage: "linear-gradient(to right, #00008b 0%, #00008b 50%, #ff0000 50%, #ff0000 100%)", color: "#fff", padding: "10px 22px", fontSize: 14, borderRadius: 16, cursor: "pointer", border: "none", transition: "0.4s ease", backgroundPosition: "right center" };
 
 export default HeartFormModal;
+<<<<<<< HEAD
 
 
 
@@ -314,3 +345,5 @@ export default HeartFormModal;
 // const processBtn = { backgroundSize: "200% auto", backgroundImage: "linear-gradient(to right, #00008b 0%, #00008b 50%, #ff0000 50%, #ff0000 100%)", color: "#fff", padding: "10px 22px", fontSize: 14, borderRadius: 16, cursor: "pointer", border: "none", transition: "0.4s ease", backgroundPosition: "right center" };
 
 // export default HeartFormModal;
+=======
+>>>>>>> upstream/main
