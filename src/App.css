@@ -1,0 +1,23 @@
+/* Ensure html, body, and root take full height */
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* App container as column flex */
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* full viewport height */
+}
+
+/* Main content grows to push footer down */
+.app-content {
+  flex: 1;
+}

@@ -1,0 +1,71 @@
+/* Reset default margin/padding for body/html */
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+/* Ensure root div also takes full width */
+#root {
+  width: 100%;
+}
+
+/* FOOTER BASE STYLE */
+footer {
+  box-sizing: border-box;
+  width: 100vw;
+  background: #b71c1c;
+  color: #fff;
+  padding: 40px 20px;
+}
+
+/* FOOTER MAIN LAYOUT */
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* LEFT SECTION (Logo + contact details centered) */
+.footer-left {
+  flex: 1;
+  text-align: center; /* CENTER LOGO + TEXT */
+}
+
+.footer-logo {
+  width: 150px;  
+  margin-bottom: 15px;
+}
+
+.footer-text {
+  font-size: 18px;
+  margin: 5px 0;
+}
+
+/* Social button links */
+footer a {
+  color: #fff;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+footer a:hover {
+  color: #ddd;
+}
+
+/* Social hover effect */
+footer a.social-button:hover {
+  opacity: 0.8;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 25px;
+  }
+}
